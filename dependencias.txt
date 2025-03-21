@@ -1,0 +1,9 @@
+-- ICONOS
+npx astro add astro-icon
+npm install @iconify-json/ri
+
+-- 
+npm i swiper
+
+--
+npx astro add react

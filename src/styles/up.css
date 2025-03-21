@@ -1,0 +1,19 @@
+.up {
+  background-color: rgba(255, 255, 255, 0.7); /* Negro con 70% de opacidad */
+  color: rgba(0, 255, 255, 0.9);
+  border: 1px black solid; 
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Transición suave */
+  opacity: 0; /* Inicialmente oculto */
+  visibility: hidden; /* Evita que ocupe espacio cuando está oculto */
+}
+.show {
+  opacity: 1; /* Visible cuando se agrega la clase 'show' */
+  visibility: visible; /* Permite que ocupe espacio cuando es visible */
+}

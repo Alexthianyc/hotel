@@ -1,0 +1,46 @@
+---
+const images = [
+  { src: '/banio.jpg', alt: 'Image 1' },
+  { src: '/banio.jpg', alt: 'Image 2' },
+  { src: '/banio.jpg', alt: 'Image 3' },
+  { src: '/banio.jpg', alt: 'Image 4' },
+  { src: '/banio.jpg', alt: 'Image large', large: true },
+  { src: '/banio.jpg', alt: 'Image 7' },
+];
+---
+
+<div class="container mx-auto p-4 max-w-screen-lg">
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    {images.slice(0, 4).map((img, index) => (
+      <div {...{ key: index }} class="aspect-square">
+        <img 
+          src={img.src} 
+          alt={img.alt} 
+          class="w-full h-full object-cover rounded-lg" 
+          width="300" 
+          height="300" 
+        />
+      </div>
+    ))}
+
+    <div class="aspect-square md:col-span-2 md:row-span-2">
+      <img 
+        src={images[4].src} 
+        alt={images[4].alt} 
+        class="w-full h-full object-cover rounded-lg" 
+        width="600" 
+        height="600" 
+      />
+    </div>
+
+    <div class="aspect-square">
+      <img 
+        src={images[5].src} 
+        alt={images[5].alt} 
+        class="w-full h-full object-cover rounded-lg" 
+        width="300" 
+        height="300" 
+      />
+    </div>
+  </div>
+</div>

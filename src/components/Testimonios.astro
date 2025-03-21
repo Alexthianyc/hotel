@@ -1,0 +1,77 @@
+---
+import comillas from "@public/comillas.svg"; // Importa el SVG desde la carpeta 'public'
+let testimonials = [
+  { name: "John Doe", testimonial: "Great service!" },
+  { name: "Jane Smith", testimonial: "Loved the experience!" },
+  { name: "Alice Johnson", testimonial: "Will come back again!" },
+  { name: "Bob Brown", testimonial: "Amazing staff and service!" },
+  { name: "Clara White", testimonial: "Highly recommend this place!" },
+];
+testimonials = [...testimonials, ...testimonials]; // Duplica los testimonios para hacer scroll infinito
+---
+
+<div class="slider">
+  <div class="list">
+    {
+        testimonials.map(({ name, testimonial }, index) => (
+          <div 
+          class="testimonial cursor-pointer w-[600px] h-[300px]"
+          style={`--position: ${index + 1};`}
+          >
+              <img class='w-full h-full' src="/habitacion.jpg" alt=" habitacion">
+            
+          </div>
+        ))
+      }
+  </div>
+</div>
+
+<style>
+  --width: 600px; /* Ancho de cada card */
+  --height: 300px; /* Alto de cada card */
+  --quantity: 5; /* Cantidad original de cards */
+  --time: 10s; /* Tiempo de scroll */
+
+  .slider{
+    width: 100%;
+    border: 5px solid rgb(255, 0, 0);
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10% 90%,
+      transparent
+    );
+  }
+  .slider .list{
+    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
+    nim-width: calc(var(--width) * var(--quantity));
+  }
+  .slider .list .testimonial{
+    min-width: var(--width);
+    width: var(--width);
+    height: var(--height);
+    left: 100%;
+    transition: filter 0.5s;
+    animation: scroll 10s linear infinite;
+    animation-delay: calc((10s / var(--quantity)) * (var(--position)-1));
+  }
+  @keyframes scroll{
+    from{
+      left: 100%;
+    }
+    to{
+      left: calc(var(--width) * -1);
+    }
+  }
+  .slider:hover .testimonial{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+  }
+  .slider:hover .testimonial{
+    animation-play-state: paused!important;
+    filter: grayscale(0);
+  }  
+</style>

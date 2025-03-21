@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+---
+<footer>
+  <div style="display: flex">
+    <div class="siguenos">
+      <div class="forma"></div>
+      <div>Siguenos en:</div>
+    </div>
+    <div class="footer-icons">
+      <Icon name="ri:facebook-fill" />
+      <Icon name="ri:instagram-fill" />
+      <Icon name="ri:twitter-fill" />
+    </div>
+  </div>
+  <p>
+    Copyright © Hotel | Powered by
+    <span>Cristian GE</span>
+  </p>
+</footer>
+<style>
+  .forma {
+    border: 1px solid rgb(255, 0, 0);
+    height: 100%;
+  }
+  footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    footer{
+      flex-direction: column;
+      gap: 1rem;
+      min-width: 300px;
+    }
+    footer p{
+      align-self: flex-end;
+    }
+  }
+  .footer-icons{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    align-items: center;
+    cursor: pointer;
+  }
+  .siguenos{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+</style>

@@ -1,123 +1,250 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "@src/layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import Up from "@components/Up.jsx";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
-			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-				d="M167.19 364.254C83.4786 364.254 0 404.819 0 404.819C0 404.819 141.781 19.4876 142.087 18.7291C146.434 7.33701 153.027 0 162.289 0H332.441C341.703 0 348.574 7.33701 352.643 18.7291C352.92 19.5022 494.716 404.819 494.716 404.819C494.716 404.819 426.67 364.254 327.525 364.254L264.41 169.408C262.047 159.985 255.147 153.581 247.358 153.581C239.569 153.581 232.669 159.985 230.306 169.408L167.19 364.254ZM160.869 530.172C160.877 530.18 160.885 530.187 160.894 530.195L160.867 530.181C160.868 530.178 160.868 530.175 160.869 530.172ZM136.218 411.348C124.476 450.467 132.698 504.458 160.869 530.172C160.997 529.696 161.125 529.242 161.248 528.804C161.502 527.907 161.737 527.073 161.917 526.233C165.446 509.895 178.754 499.52 195.577 500.01C211.969 500.487 220.67 508.765 223.202 527.254C224.141 534.12 224.23 541.131 224.319 548.105C224.328 548.834 224.337 549.563 224.347 550.291C224.563 566.098 228.657 580.707 237.264 593.914C245.413 606.426 256.108 615.943 270.749 622.478C270.593 621.952 270.463 621.508 270.35 621.126C270.045 620.086 269.872 619.499 269.685 618.911C258.909 585.935 266.668 563.266 295.344 543.933C298.254 541.971 301.187 540.041 304.12 538.112C310.591 533.854 317.059 529.599 323.279 525.007C345.88 508.329 360.09 486.327 363.431 457.844C364.805 446.148 363.781 434.657 359.848 423.275C358.176 424.287 356.587 425.295 355.042 426.275C351.744 428.366 348.647 430.33 345.382 431.934C303.466 452.507 259.152 455.053 214.03 448.245C184.802 443.834 156.584 436.019 136.218 411.348Z"
-				fill="url(#paint0_linear_1805_24383)"></path>
-			<defs>
-				<linearGradient
-					id="paint0_linear_1805_24383"
-					x1="247.358"
-					y1="0"
-					x2="247.358"
-					y2="622.479"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Hotel en cuidad">
+  <main>
+    <section
+      class="parallax center"
+      style="background-image: url('/entrada.jpg');"
+    >
+      <div class="text-top">Hotel</div>
+    </section>
+    <div class="twoSpaces">
+      <div class="services h-vh100">
+        <h2>Servicios del hotel</h2>
+        <p class="mb-4">
+          Ofrecemos una variedad de servicios para hacer tu estancia más cómoda.
+        </p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🚗</div>
+            <h3>Estacionamiento</h3>
+            <p>Estacionamiento gratuito para todos nuestros huéspedes.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📶</div>
+            <h3>Wi-Fi</h3>
+            <p>Conexión rápida y gratuita en todo el hotel.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">❄️</div>
+            <h3>Aire acondicionado</h3>
+            <p>Climatización para tu máximo confort en cada habitación.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📺</div>
+            <h3>TV Pantalla Plana</h3>
+            <p>
+              Disfruta de canales locales y servicios de streaming en alta
+              definición.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">⏰</div>
+            <h3>Abierto 24 hrs</h3>
+            <p>Estamos disponibles para ti a cualquier hora del día.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🎬</div>
+            <h3>Entretenimiento</h3>
+            <p>
+              Acceso a Netflix, Disney+ y HBO para que disfrutes tu tiempo
+              libre.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        style="background-image: url('/habitacion.jpg')"
+        class="h-vh100 imagen"
+      >
+      </div>
+    </div>
+    <section
+      class="parallax imagen"
+      style="background-image: url('/banio.jpg');"
+    >
+    </section>
+    <div style="height: auto">
+      <div class="house-rules">
+        <h2>Normas de la casa</h2>
+        <div class="rule">
+          <div class="icon">🕒</div>
+          <div class="text">De las 12:00 a las 14:00</div>
+        </div>
+        <div class="rule">
+          <div class="icon">🚪</div>
+          <div class="text">Antes de las 12:00</div>
+        </div>
+        <div class="rule">
+          <div class="icon">👶</div>
+          <div class="text">Menores de 6 años no cancelan</div>
+        </div>
+        <div class="rule">
+          <div class="icon">🐾</div>
+          <div class="text">No se admiten mascotas</div>
+        </div>
+        <div class="rule">
+          <div class="icon">💳</div>
+          <div class="text">Aceptamos tarjetas de crédito y efectivo</div>
+        </div>
+      </div>
+    </div>
+    <section
+      class="parallax imagen"
+      style="background-image: url('/servicio.jpg');"
+    >
+    </section>
+    <Footer />
+    <Up client:idle />
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  .parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icon {
+  }
+  section {
+    width: 100%;
+    height: 100vh;
+  }
+  .twoSpaces {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+  }
+  @media (max-width: 1024px) {
+    .twoSpaces {
+      grid-template-columns: 1fr;
+      height: 200vh;
+    }
+    .h-vh100 {
+      height: 100vh;
+    }
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-top {
+    color: white;
+    font-size: 10rem;
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+  }
+  @media (max-width: 768px) {
+    .text-top {
+      font-size: 7rem;
+    }
+  }
+
+  /* Estilos para la sección de las normas de la casa */
+  .spacing {
+    padding: 2rem;
+  }
+  h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 1rem 0;
+  }
+  .house-rules {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    padding: 2rem;
+  }
+  .rule {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  .rule:hover {
+    background-color: #f1f1f1;
+  }
+  .icon {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    color: #4caf50;
+  }
+  .text {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  /* Estilos para la sección de los servicios */
+  .services {
+    padding: 1rem;
+    background-color: #f5f5f5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Asegura que el contenedor ocupe todo el espacio */
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 100%; /* Asegura que el grid ocupe todo el espacio */
+  }
+
+  .service-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye los elementos dentro de las tarjetas */
+    min-height: 0; /* Permite que las tarjetas se ajusten */
+  }
+
+  .services h2 {
+    font-size: 2rem;
+    margin: 10px;
+    color: #333;
+  }
+  .services p {
+    font-size: 1rem;
+    color: #666;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  .service-card .service-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #4caf50; /* Color verde para los íconos */
+  }
+  .service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .service-card p {
+    font-size: 0.9rem;
+    color: #666;
+  }
 </style>
